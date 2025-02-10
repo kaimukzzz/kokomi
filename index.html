@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOKOMI | 心海</title>
+	<link rel="icon" type="image/x-icon" href="./assets/icon.png">
+    <style>
+        /* 页面样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('./assets/background.jpg') no-repeat center center fixed;
+            backdrop-filter: blur(0px);
+            background-size: cover;
+            color: #f4f4f9;
+        }
+        /* 加载动画 */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+        #loader div {
+            width: 24px;
+            height: 24px;
+            background-color: #f4f4f9;
+            border-radius: 50%;
+            animation: bounce 0.6s infinite alternate;
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-20px); }
+        }
+        /* 内容区域样式 */
+        .container {
+            max-width: 400px;
+            padding: 30px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.555);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.253);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+            animation-delay: 0.6s;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .footer, .lang-switch {
+            font-size: 0.9em;
+            color: #e0e0e0;
+        }
+        .footer {
+            margin-top: 20px;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+        .lang-switch a {
+            color: #e0e0e0;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+        }
+        .lang-switch a:hover {
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        #mail{
+            color: #2ef0e6;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>珊瑚宮心海</h1>
+        <p>Greetings fellow <strong><a style="color: #efc2d7;">Kokoqueen</a></strong> enjoyers.</p>
+		<p>View Kokoqueen gallery <a style="color: #2ef0e6;" href="https://goindex.kokomi.be/0:/Kokomi/">HERE</a>.</p>
+        <p>Send me an <a id="mail" href="mailto:info@kokomi.be">email</a> if you have any questions.</p>
+		<h3>🐟 🐟 🐟</h3>
+    </div>
+
+    <script>
+        // Hide loading animation after the page loads
+        window.addEventListener('load', function() {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+
+
+</body></html>
